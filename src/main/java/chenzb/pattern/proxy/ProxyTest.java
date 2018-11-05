@@ -1,5 +1,7 @@
 package chenzb.pattern.proxy;
 
+import chenzb.pattern.proxy.custom.CustomProxy;
+import chenzb.pattern.proxy.custom.JdkCustomProxy;
 import chenzb.pattern.proxy.dynamic.CglibProxy;
 import chenzb.pattern.proxy.dynamic.JdkProxy;
 import chenzb.pattern.proxy.stative.StaticProxy;
@@ -29,6 +31,13 @@ public class ProxyTest {
     @Test
     public void testCglibProxy() {
         Person person = (Person) new CglibProxy().getInstance(Doctor.class);
+        person.eat("apple");
+        person.sleep();
+    }
+
+    @Test
+    public void testCustomProxy() {
+        Person person = JdkCustomProxy.getInstance(new Student());
         person.eat("apple");
         person.sleep();
     }
