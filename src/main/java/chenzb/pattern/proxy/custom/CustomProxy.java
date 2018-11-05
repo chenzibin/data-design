@@ -1,5 +1,10 @@
 package chenzb.pattern.proxy.custom;
 
+import javax.tools.JavaCompiler;
+import java.io.FileOutputStream;
+import java.io.FileWriter;
+import java.io.IOException;
+
 /**
  * Created by chenzibin on 2018/11/5.
  */
@@ -18,7 +23,7 @@ public class CustomProxy {
      * @param handler 代理方法的实现（前置通知、后置通知等）
      * @return 代理对象
      */
-    public Object newProxyInstance(ClassLoader loader, Class<?>[] interfaces, CustomInvocationHandler handler) {
+    public static Object newProxyInstance(ClassLoader loader, Class<?>[] interfaces, CustomInvocationHandler handler) {
         // JDK实现：解析interfaces，生成class字节码，字节码defineClass为代理对象
 
         // 1、解析interfaces，需考虑的情况过于繁杂，仅考虑例子中的简单情况
@@ -109,6 +114,12 @@ public class CustomProxy {
                 "        }\n" +
                 "    }\n" +
                 "}\n";
+
+        try (FileWriter javaWrite = new FileWriter("$Proxy0.java")) {
+            javaWrite.write(content);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
 
         return null;
     }
