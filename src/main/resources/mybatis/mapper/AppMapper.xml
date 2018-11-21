@@ -12,7 +12,7 @@
         <result column="email" property="email" />
     </resultMap>
 
-    <select id="selectApp" resultMap="appResultMap">
+    <select id="selectOne" resultMap="appResultMap">
         select * from app where app_id = #{id}
     </select>
 </mapper>

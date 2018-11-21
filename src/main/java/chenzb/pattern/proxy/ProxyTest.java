@@ -1,6 +1,5 @@
 package chenzb.pattern.proxy;
 
-import chenzb.pattern.proxy.custom.CustomProxy;
 import chenzb.pattern.proxy.custom.JdkCustomProxy;
 import chenzb.pattern.proxy.dynamic.CglibProxy;
 import chenzb.pattern.proxy.dynamic.JdkProxy;

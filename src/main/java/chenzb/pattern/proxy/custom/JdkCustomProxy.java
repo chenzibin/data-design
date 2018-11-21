@@ -4,9 +4,7 @@ import chenzb.pattern.proxy.Person;
 import chenzb.pattern.proxy.Student;
 import chenzb.pattern.proxy.stative.StaticProxy;
 
-import java.lang.reflect.InvocationHandler;
 import java.lang.reflect.Method;
-import java.lang.reflect.Proxy;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 

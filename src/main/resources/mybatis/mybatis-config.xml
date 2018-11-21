@@ -13,6 +13,7 @@
     <typeHandlers>
         <!--<package name="chenzb.mybatis.type" />-->
         <typeHandler handler="chenzb.mybatis.type.MyStringTypeHandler" />
+        <typeHandler handler="chenzb.mybatis.type.MyEnumTypeHandler" />
     </typeHandlers>
 
     <environments default="develop">
@@ -28,7 +29,8 @@
     </environments>
     
     <mappers>
-        <!--<package name="mybatis/mapper/" />-->
+        <!--<package name="mybatis/mapper" />-->
         <mapper resource="mybatis/mapper/AppMapper.xml" />
+        <mapper resource="mybatis/mapper/ConfigMapper.xml" />
     </mappers>
 </configuration>

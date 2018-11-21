@@ -6,14 +6,14 @@ import lombok.Getter;
  * Created by chenzibin on 2018/11/20.
  */
 @Getter
-public enum ConfigType {
+public enum ConfigType implements BaseEnum {
 
     FILE(0), ITEM(1);
 
-    private int ordinal;
+    private int value;
 
-    ConfigType(int ordinal) {
-        this.ordinal = ordinal;
+    ConfigType(int value) {
+        this.value = value;
     }
 
 }

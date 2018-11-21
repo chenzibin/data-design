@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="chenzb.mybatis.dao.ConfigMapper">
+
+    <resultMap id="configResultMap" type="chenzb.mybatis.model.Config">
+        <id column="config_id" property="configId" />
+        <result column="type" property="type" />
+        <result column="status" property="status" />
+        <result column="name" property="name" />
+        <result column="value" property="value" />
+        <result column="app_id" property="appId" />
+    </resultMap>
+
+    <select id="selectOne" resultMap="configResultMap">
+        select * from config where config_id = #{id}
+    </select>
+</mapper>

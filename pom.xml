@@ -28,7 +28,7 @@
                 <groupId>org.mybatis.generator</groupId>
                 <artifactId>mybatis-generator-maven-plugin</artifactId>
                 <configuration>
-                    <configurationFile>${project.basedir}/src/main/resources/mybatis/mybatis-generator.xml</configurationFile>
+                    <configurationFile>src/main/resources/mybatis/mybatis-generator.xml</configurationFile>
                 </configuration>
                 <!--<executions>-->
                     <!--<execution>-->

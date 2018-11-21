@@ -2,8 +2,8 @@ package chenzb.pattern.factory;
 
 import chenzb.pattern.factory.abstractor.FruitFactory;
 import chenzb.pattern.factory.factory.AppleFactory;
-import chenzb.pattern.factory.factory.OrangeFactory;
 import chenzb.pattern.factory.simple.SimpleFactory;
+import chenzb.pattern.factory.factory.OrangeFactory;
 import org.junit.Assert;
 import org.junit.Test;
 
