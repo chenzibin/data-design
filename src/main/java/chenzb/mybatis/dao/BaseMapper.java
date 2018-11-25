@@ -1,5 +1,7 @@
 package chenzb.mybatis.dao;
 
+import org.apache.ibatis.annotations.Param;
+
 import java.util.List;
 
 /**
@@ -7,7 +9,7 @@ import java.util.List;
  */
 public interface BaseMapper<T> {
 
-    T selectOne(Integer id);
+    T selectOne(@Param("id") Integer id);
 
     List<T> selectList();
 

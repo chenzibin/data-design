@@ -17,4 +17,8 @@
     <select id="selectOne" resultMap="configResultMap">
         select * from config where config_id = #{id}
     </select>
+
+    <select id="selectByAppId" resultMap="configResultMap">
+        select * from config where app_id = #{appId}
+    </select>
 </mapper>

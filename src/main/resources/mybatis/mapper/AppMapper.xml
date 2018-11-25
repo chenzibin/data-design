@@ -10,6 +10,8 @@
         <result column="name" property="name" />
         <result column="description" property="description" />
         <result column="email" property="email" />
+        <association column="app_id" property="configs" select="chenzb.mybatis.dao.ConfigMapper.selectByAppId" />
+        <!--<association property="config"-->
     </resultMap>
 
     <select id="selectOne" resultMap="appResultMap">
